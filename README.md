@@ -1,7 +1,7 @@
-# End To End MAchine Learning Project structure
+# End To End Machine Learning Project structure
 
 ## Problem Statement
-
+- This project understands how the students performance (test scores) is affected by other variables such as Gender, Ethinicity, Parental Level of Education, Lunch and Test Preparation course.
 
 
 ## Global Repo Structure

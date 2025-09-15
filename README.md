@@ -19,8 +19,9 @@
 |
 ├── /notebook  # All `.ipynb` notebooks
 |
+├── app.py # app GUI using Flask
+|
 └── README.md
-
 ```
 
 
@@ -34,6 +35,7 @@
 ├── setup.py  
 ├── requirments.txt  
 ├── /notebook  
+├── app.py
 ├── README.md
 |
 ├── .venv  # Local Running Environment
@@ -64,6 +66,7 @@
 ├── logger.py
 ├── exception.py
 └── utils.py
+
 ```
 
 > `components` : all the modules and processes that we will create like data_ingestion etc. \

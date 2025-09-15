@@ -12,6 +12,8 @@ from sklearn.metrics import r2_score
 
 from src.exception import CustomException
 from src.logger import logging
+
+
 def save_obj(file_path:str, obj:object) -> None:
     """
     Saves a object in the given file path in form of a pickle file
@@ -31,6 +33,28 @@ def save_obj(file_path:str, obj:object) -> None:
             dill.dump(obj, file_obj)
     except Exception as e:
         raise CustomException(e,sys)
+    
+    
+def load_obj(file_path:str) -> object:
+    """
+    Returns a object for the given pickle file path
+    
+    Args
+    ----
+        file_path : str
+            location of the pickle file which you want to load
+            
+    Returns
+    -------
+        object
+            OBJECT of the pickle file
+    """    
+    try:
+        with open(file_path,'rb') as file_obj:
+            return dill.load(file_obj)
+    except Exception as e:
+        raise CustomException(e,sys)    
+    
     
     
 def evaluate_models(X_train:NDArray, y_train:NDArray, X_test:NDArray, y_test:NDArray, models:Dict[str,BaseEstimator],params,metric:Callable=r2_score) -> Dict[str,float]:
